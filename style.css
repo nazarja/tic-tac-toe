@@ -1,0 +1,202 @@
+
+/*******************************
+    Google Font
+*******************************/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+
+/*******************************
+    General
+*******************************/
+
+body {
+    background: #333;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #ddd;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+/*******************************
+  Status Line
+*******************************/
+
+#chooseX {
+    color: steelblue;
+}
+
+#chooseO {
+    color: steelblue;
+}
+
+#chooseX, #chooseO {
+    transition: 0.3s;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#chooseX:hover , #chooseO:hover {
+    color: ghostwhite;
+}
+
+/*******************************
+    Text Areas
+*******************************/
+
+h1 {
+    margin-top: 4%;
+    color: #777;
+}
+
+#status {
+    color: #777;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-top: 2.5%;
+    transition: 0.5s;
+}
+
+.boldStatus {
+    color: #ddd;
+    font-weight: 700;
+}
+
+.score {
+    color: #4682B4;
+    margin-top: 2.5%;
+    font-weight: 300;
+}
+
+#yourScore, #cpuScore {
+    color: ghostwhite;
+}
+
+.footer {
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+a , a:active, a:focus , a:visited {
+    text-decoration: none;
+    color: lightsteelblue;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: steelBlue;
+}
+
+#reset {
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#reset:hover {
+    text-decoration: underline;
+}
+
+/*******************************
+    Board
+*******************************/
+
+.board {
+    margin: auto;
+    margin-top: 5%;
+    width: 450px;
+    height: 450px;
+    font-size: 6rem;
+    font-weight: 700;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.cell {
+    display: flex;
+    float: left;
+    width: 32%;
+    height: 32%;
+    border: 2px solid #555;
+    cursor: pointer;
+}
+
+.board .cell:nth-child(1), .board .cell:nth-child(3),
+.board .cell:nth-child(7), .board .cell:nth-child(9) {
+    border: 0;
+}
+
+.board .cell:nth-child(2), .board .cell:nth-child(8) {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.board .cell:nth-child(4), .board .cell:nth-child(6) {
+    border-left: 0;
+    border-right: 0;
+}
+
+.cell p {
+    margin-left: 36px;
+    margin-top: 15px;
+}
+
+/*******************************
+    Cells
+*******************************/
+
+.X {
+    color: steelblue;
+}
+
+.O {
+    color: ghostwhite;
+}
+
+.ghost {
+    color: #444;
+    transition: 0.5s;
+}
+
+.taken {
+    cursor: not-allowed;
+}
+
+
+/*******************************
+   Media Queries
+*******************************/
+
+@media screen and (max-width: 750px) {
+
+    h1 {
+        margin-top: 10%;
+    }
+
+    .board {
+        margin-top: 20%;
+        height: 250px;
+        width: 250px;
+    }
+
+    .cell {
+        font-size: 4rem;
+    }
+
+    .cell p {
+        margin-left: 15px;
+        margin-top: 0px; 
+    }
+
+    .status {
+        margin-top: 20%;
+        font-size: 1.2em;
+    }
+
+    .boldStatus {
+        font-size: .9em;
+    }
+}
